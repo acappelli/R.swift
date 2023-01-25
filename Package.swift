@@ -5,7 +5,7 @@ let package = Package(
     name: "Rswift",
     platforms: [
         .macOS(.v10_15),
-        .iOS(.v11),
+        .iOS(.v10),
         .tvOS(.v11),
         .watchOS(.v4),
     ],
