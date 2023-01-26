@@ -55,6 +55,7 @@ extension UIColor {
 
      - returns: A color that exactly or best matches the desired traits with the given resource (`R.color.*`), or nil if no suitable color was found.
      */
+    @available(iOS 11.0, *)
     public convenience init?(resource: ColorResource, compatibleWith traitCollection: UITraitCollection? = nil) {
         self.init(named: resource.name, in: resource.bundle, compatibleWith: traitCollection)
     }
