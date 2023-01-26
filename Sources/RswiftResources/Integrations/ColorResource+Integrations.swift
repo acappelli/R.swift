@@ -37,7 +37,11 @@ extension ColorResource {
      */
     //    @available(*, deprecated, message: "Use UIColor(resource:) initializer instead")
     public func callAsFunction(compatibleWith traitCollection: UITraitCollection? = nil) -> UIColor? {
-        UIColor(named: name, in: bundle, compatibleWith: traitCollection)
+        if #available(iOS 11.0, *) {
+            return UIColor(named: name, in: bundle, compatibleWith: traitCollection)
+        } else {
+            return UIColor.clear
+        }
     }
 }
 
